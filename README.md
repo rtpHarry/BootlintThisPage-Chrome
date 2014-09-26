@@ -9,7 +9,7 @@ If errors are found then bootlint.js will generate a JavaScript alert and the er
 
 To view the errors simply press F12 to bring up the developer tools and then click the console tab.
 
-**Note: This extension is not affiliated with the official Bootlint or Bootstrap projects**
+**Note: This extension is not affiliated with the official Bootlint or Bootstrap projects.**
 
 What Is Bootlint?
 =================
