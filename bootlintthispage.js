@@ -27,8 +27,7 @@ function bootlintThisPage() {
         ga('send', 'event', 'bootlint', 'click');
     }
 
-    chrome.tabs.executeScript(null,
-        { code: "(function () { document.body.appendChild(document.createElement('script')).src = 'https://maxcdn.bootstrapcdn.com/bootlint/latest/bootlint.min.js';  })();" });
+    chrome.tabs.executeScript(null, { file: 'runbootlint.js' });
 }
 
 var enableAnalytics;
