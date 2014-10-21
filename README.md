@@ -38,7 +38,17 @@ There is a website available at:
   
 Bookmarklet Alternative
 =======================
-If you prefer you can install this as a bookmarklet. Full instructions are over on the [Bootlint This Page Bookmarklet](http://articles.runtings.co.uk/2014/09/using-new-bootlint-tool-from-bootstrap.html) page.
+The Bootlint team have incorporated my idea into the project as an official way to use their tool. 
+
+In the process some of the code was changed (eg auto-lint-on-load was disabled) so my original bookmarklet no longer works and has been removed. 
+
+Please [visit the official Bootlint documentation](https://github.com/twbs/bootlint#in-the-browser) for more information about how you can now use the bookmarklet.
+
+
+Release History
+===============
+v1.1 - 21-Oct-2014 - Updated to work with Bootlint v0.5.0
+v1.0 - 26-Sep-2014 - Initial release
   
 License
 =======
