@@ -1,5 +1,5 @@
 /*
-    BootlintThisPage-Chrome v1.0
+    BootlintThisPage-Chrome v1.1
     Copyright (C) 2014 Matthew Harris aka rtpHarry
 
     Adds a Bootlint This Page button which will execute the bootlint.js against the current page.
