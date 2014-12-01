@@ -3,7 +3,7 @@
     "minimum_chrome_version": "20",
 
     "name": "Bootlint This Page",
-    "version": "1.1",
+    "version": "1.2",
     "author": "rtpHarry",
     "homepage_url": "http://articles.runtings.co.uk/p/bootlint-this-page-chrome.html",
     "description": "Use this extension to inject the Bootlint tool into the web page and automatically scan it for common Bootstrap related errors",
