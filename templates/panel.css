@@ -1,0 +1,11 @@
+#footer-panel {
+  position: fixed;
+  bottom: 0;
+  width: 100%;  
+  max-height: 250px;
+  margin-bottom: 0;  
+}
+
+#footer-panel .panel-body {
+  overflow-y: scroll;
+}
