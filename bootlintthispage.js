@@ -27,6 +27,7 @@ function bootlintThisPage() {
         ga('send', 'event', 'bootlint', 'click');
     }
 
+    chrome.tabs.executeScript(null, { file: 'lib/bootlint.js' });
     chrome.tabs.executeScript(null, { file: 'runbootlint.js' });
 }
 
