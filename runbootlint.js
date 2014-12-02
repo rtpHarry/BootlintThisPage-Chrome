@@ -46,9 +46,20 @@
 		  e.preventDefault();
 	  });*/
   }
+  
+  function lintsForCurrentDocument() {
+    var lints = [];
+    var reporter = function (lint) {
+        lints.push(lint);
+    };
+    bootlint.lintCurrentDocument(reporter, []);
+    return lints;
+  }
 
   $.get(chrome.extension.getURL("templates/panel.html"), function(data) {
-  	  bootlint.showLintReportForCurrentDocument([]);	  
+  	  var lints = lintsForCurrentDocument();
+	  debugger;
+	  //console.table(lints);
 	  $('#footer-panel').remove();
 	  $("body").append(data);
       setupPanelHeight();
