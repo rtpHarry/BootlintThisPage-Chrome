@@ -47,8 +47,10 @@ Please [visit the official Bootlint documentation](https://github.com/twbs/bootl
 
 Release History
 ===============
-v1.2 - 01-Dec-2014 - Updated to work with Bootlint v0.5.0
+v1.2 - 01-Dec-2014 - Updated to work with Bootlint v0.8.0
+
 v1.1 - 21-Oct-2014 - Updated to work with Bootlint v0.5.0
+
 v1.0 - 26-Sep-2014 - Initial release
   
 License
