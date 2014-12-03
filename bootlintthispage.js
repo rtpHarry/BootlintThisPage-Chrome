@@ -27,11 +27,13 @@ function bootlintThisPage() {
         ga('send', 'event', 'bootlint', 'click');
     }
 
+    chrome.tabs.executeScript(null, { file: 'lib/angular.min.js' });	
     chrome.tabs.executeScript(null, { file: 'lib/bootlint.js' });
     chrome.tabs.executeScript(null, { file: 'lib/jquery-2.1.1.min.js' });	
     chrome.tabs.executeScript(null, { file: 'lib/bootstrap.min.js' });	
     chrome.tabs.insertCSS(null, { file: 'lib/bootstrap.min.css' });
-	chrome.tabs.insertCSS(null, { file: 'templates/panel.css' });			
+	chrome.tabs.insertCSS(null, { file: 'templates/panel.css' });
+    chrome.tabs.executeScript(null, { file: 'app.js' });	
     chrome.tabs.executeScript(null, { file: 'runbootlint.js' });
 }
 
