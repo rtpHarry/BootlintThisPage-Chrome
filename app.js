@@ -8,7 +8,6 @@
 				lints.push(lint);
 			};
 			bootlint.lintCurrentDocument(reporter, []);
-			debugger;
 			return lints;
 		}
 		
