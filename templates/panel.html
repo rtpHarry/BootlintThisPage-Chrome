@@ -1,29 +1,32 @@
-<div ng-app="errorPanel" id="footer-panel" class="panel panel-danger panel-collapse collapse in" role="dialog" aria-labelledby="footer-panel-heading">
-  <div class="panel-heading" id="footer-panel-heading">
-    <h4 class="panel-title"> Error List 
-      <a class="pull-right close" data-toggle="collapse" href="#footer-panel" aria-expanded="true" aria-controls="footer-panel">
-        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
-      </a>
-    </h4>
-  </div>
-  <div class="panel-body">
-    <table class="table" ng-controller="ErrorItemController as errors">
-    	<thead>
-	    <tr>
-    		<th>#</th>
-            <th>ID</th>
-            <th>Message</th>
-            <th>Location</th>
-        </tr>
-        </thead>
-        <tbody ng-repeat="error in errors.lints">
-        	<tr>
-            	<td>{{$index + 1}}</td>
-                <td>{{error.id}}</td>
-                <td>{{error.message}}</td>
-                <td>todo</td>                                
+<div ng-non-bindable>
+    <div ng-app="errorPanel" id="footer-panel" class="panel panel-danger panel-collapse collapse in" role="dialog" aria-labelledby="footer-panel-heading">
+      <div class="panel-heading" id="footer-panel-heading">
+        <h4 class="panel-title"> Error List 
+          <button ng-click="rescan" class="btn btn-primary">Rescan</button>
+          <a class="pull-right close" data-toggle="collapse" href="#footer-panel" aria-expanded="true" aria-controls="footer-panel">
+            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+          </a>
+        </h4>
+      </div>
+      <div class="panel-body">
+        <table id="errorListTable" class="table" ng-controller="ErrorItemController as errors">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Message</th>
+                <th>Location</th>
             </tr>
-        </tbody>        
-    </table>
-  </div>
+            </thead>
+            <tbody>
+                <tr ng-repeat="error in errors.lints">
+                    <td>{{$index + 1}}</td>
+                    <td>{{error.id}}</td>
+                    <td>{{error.message}}</td>
+                    <td>todo</td>                                
+                </tr>
+            </tbody>        
+        </table>
+      </div>
+    </div>
 </div>

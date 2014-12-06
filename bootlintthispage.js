@@ -22,20 +22,22 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 function bootlintThisPage() {
 	if (enableAnalytics) {
 		ga('send', 'event', 'bootlint', 'click');
 	}
 
-	chrome.tabs.executeScript(null, { file: 'lib/angular.min.js' });	
-	chrome.tabs.executeScript(null, { file: 'lib/bootlint.js' });
-	chrome.tabs.executeScript(null, { file: 'lib/jquery-2.1.1.min.js' });	
-	chrome.tabs.executeScript(null, { file: 'lib/bootstrap.min.js' });	
-	chrome.tabs.insertCSS(null, { file: 'lib/bootstrap.min.css' });
-	chrome.tabs.insertCSS(null, { file: 'templates/panel.css' });
-	chrome.tabs.executeScript(null, { file: 'app.js' });	
-	chrome.tabs.executeScript(null, { file: 'startup.js' });
+		chrome.tabs.executeScript(null, { code: 'window.name = "NG_DEFER_BOOTSTRAP!" + window.name;' });
+		chrome.tabs.executeScript(null, { file: 'lib/angular.min.js' });	
+		chrome.tabs.executeScript(null, { file: 'lib/bootlint.js' });
+		chrome.tabs.executeScript(null, { file: 'lib/jquery-2.1.1.min.js' });	
+		chrome.tabs.executeScript(null, { file: 'lib/bootstrap.min.js' });	
+		chrome.tabs.insertCSS(null, { file: 'lib/bootstrap.min.css' });
+		chrome.tabs.insertCSS(null, { file: 'templates/panel.css' });
+		chrome.tabs.executeScript(null, { file: 'app.js' });	
+		chrome.tabs.executeScript(null, { file: 'startup.js' });		
+
+//		chrome.tabs.executeScript(null, { code: 'angular.element($("#errorListTable")).scope().$apply();' });		
 }
 
 var enableAnalytics;

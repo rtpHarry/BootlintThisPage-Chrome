@@ -51,6 +51,8 @@
 	  $('#footer-panel').remove();
 	  $("body").append(data);
       setupPanelHeight();
-	  angular.bootstrap(document, ['errorPanel']);
+	  
+	  window.name = ''; 
+	  angular.bootstrap($("#footer-panel")[0], ['errorPanel']);
   });
 })();
