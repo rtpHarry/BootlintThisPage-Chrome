@@ -10,9 +10,9 @@ myApp.service('bootlintService', function() {
                     // bootlint here
 					model.lints = [];
 					var reporter = function (lint) {
-						lints.push(lint);
+						model.lints.push(lint);
 					};
-					bootlint.lintHtml(htmlDocument, reporter, []);
+					bootlint._lint($, reporter, [], htmlDocument.html);
                     callback(model);
                 });
             }
@@ -22,7 +22,7 @@ myApp.service('bootlintService', function() {
 
 myApp.controller("PopupController", function ($scope, bootlintService) {
     bootlintService.getInfo(function (info) {
-        $scope.lints = info;
+        $scope.lints = info.lints;
         
         $scope.$apply();
     });
