@@ -27,10 +27,21 @@
             "19": "images/icon19.png",
             "38": "images/icon38.png"
         },
+		"default_popup": "templates/popup.html",
         "default_title": "Bootlint This Page"
     },
-    "permissions": [
-        "activeTab",
-        "storage"
-    ]
+	"content_scripts": [ {
+		"js": [ "js/lib/jquery-2.1.1.min.js", "js/app/content.js" ],
+		"matches": [ "*://*/*" ],
+		"run_at": "document_start"
+	} ],
+    "permissions": [ 
+		"http://*/*", 
+		"https://*/*", 
+		"unlimitedStorage", 
+		"contextMenus", 
+		"cookies", 
+		"tabs", 
+		"notifications"
+	]
 }

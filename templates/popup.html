@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="BootlintThisPageChrome" ng-csp>
+    <head>
+        <script src="/js/lib/jquery-2.1.1.min.js"></script>    
+        <script src="/js/lib/angular.min.js"></script>        
+        <link rel="stylesheet" href="/js/lib/bootstrap.min.css">
+        <script src="/js/lib/bootstrap.min.js"></script>        
+        <script src="/js/lib/bootlint.js"></script>        
+
+        <script src="/js/app/app.js"></script>
+        <script src="/js/app/popup.js"></script>
+    </head>
+    <body id="popup">
+        <header>
+            <h1>Bootlint This Page</h1>
+        </header>
+        <table id="errorListTable" class="table" ng-controller="PopupController">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Message</th>
+                <th>Location</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="error in lints">
+                    <td>{{$index + 1}}</td>
+                    <td>{{error.id}}</td>
+                    <td>{{error.message}}</td>
+                    <td>todo</td>                                
+                </tr>
+            </tbody>        
+        </table>
+    </body>
+</html>
